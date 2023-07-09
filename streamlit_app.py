@@ -40,12 +40,12 @@ def generate_response(input_text):
   ##loader = CSVLoader(file_path='pokemon.csv')
   folder_path = 'files'
   ##loader = CSVLoader(folder_path=folder_path)
-  st.info("Listing files")
+  st.info("Listing of files")
   dataframes = load_files(folder_path)
   st.info(dataframes)
   # Create data loaders for each CSV file
-  data_loaders = [CSVLoader(filename) for filename in dataframes]
-
+  data_loaders = [CSVLoader(file_path=filename) for filename in dataframes]
+  st.info(data_loaders)
   #llm = OpenAI(temperature=0.7, openai_api_key=openai_api_key)
   #st.info(llm(input_text))
   index_creator = VectorstoreIndexCreator()
