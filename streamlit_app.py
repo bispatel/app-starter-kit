@@ -8,12 +8,10 @@ import os
 st.title('Bishwajit Search App')
 
 openai_api_key = st.sidebar.text_input('OpenAI API Key')
-#os.environ['OPENAI_API_KEY']= "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"
 
 def generate_response(input_text):
   #llm = OpenAI(temperature=0.7, openai_api_key=openai_api_key)
   #st.info(llm(input_text))
-  #os.environ['OPENAI_API_KEY']='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'
   loader = CSVLoader(file_path='pokemon.csv')
   index_creator = VectorstoreIndexCreator()
   docsearch = index_creator.from_loaders([loader])
