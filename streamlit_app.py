@@ -16,9 +16,7 @@ def load_files(folder_path):
 
     for file in files:
         if file.endswith('.csv'):
-            file_path = os.path.join(folder_path, file)
-            df = pd.read_csv(file_path)
-            dataframes.append(df)
+            dataframes.append(file)
 
     return dataframes
         
@@ -29,7 +27,9 @@ def generate_response(input_text):
   ##loader = CSVLoader(file_path='pokemon.csv')
   folder_path = 'files'
   ##loader = CSVLoader(folder_path=folder_path)
+  print("Listing files")
   dataframes = load_files(folder_path)
+  print(dataframes)
   index_creator = VectorstoreIndexCreator()
   docsearch = index_creator.from_loaders(dataframes)
   chain = RetrievalQA.from_chain_type(llm=OpenAI(),chain_type="stuff",retriever=docsearch.vectorstore.as_retriever(),input_key="question")
