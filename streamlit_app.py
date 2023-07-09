@@ -44,10 +44,10 @@ def generate_response(input_text):
   ##st.info(llm(input_text))
   os.environ["OPENAI_API_KEY"] = openai_api_key
   ##loader = CSVLoader(file_path='pokemon.csv')
-  #folder_path = 'files'
+  folder_path = 'files'
   ##loader = CSVLoader(folder_path=folder_path)
   print("Listing files")
-  dataframes = load_files(destination_folder)
+  dataframes = load_files(folder_path)
   print(dataframes)
   # Create data loaders for each CSV file
   data_loaders = [CSVLoader(filename) for filename in dataframes]
