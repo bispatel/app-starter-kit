@@ -40,9 +40,9 @@ def generate_response(input_text):
   ##loader = CSVLoader(file_path='pokemon.csv')
   folder_path = 'files'
   ##loader = CSVLoader(folder_path=folder_path)
-  print("Listing files")
+  st.info("Listing files")
   dataframes = load_files(folder_path)
-  print(dataframes)
+  st.info(dataframes)
   # Create data loaders for each CSV file
   data_loaders = [CSVLoader(filename) for filename in dataframes]
 
