@@ -46,14 +46,14 @@ def generate_response(input_text):
   # Create data loaders for each CSV file
   data_loaders = [CSVLoader(filename) for filename in dataframes]
 
-  llm = OpenAI(temperature=0.7, openai_api_key=openai_api_key)
-  st.info(llm(input_text))
-  #index_creator = VectorstoreIndexCreator()
-  #docsearch = index_creator.from_loaders(data_loaders)
-  #chain = RetrievalQA.from_chain_type(llm=OpenAI(),chain_type="stuff",retriever=docsearch.vectorstore.as_retriever(),input_key="question")
-  #response=chain({"question":input_text})
-  #st.info(response['result'])
-  #print(response['result'])
+  #llm = OpenAI(temperature=0.7, openai_api_key=openai_api_key)
+  #st.info(llm(input_text))
+  index_creator = VectorstoreIndexCreator()
+  docsearch = index_creator.from_loaders(data_loaders)
+  chain = RetrievalQA.from_chain_type(llm=OpenAI(),chain_type="stuff",retriever=docsearch.vectorstore.as_retriever(),input_key="question")
+  response=chain({"question":input_text})
+  st.info(response['result'])
+ 
 
 with st.form('my_form'):
   text = st.text_area('Enter text:', 'What are the three key pieces of advice for learning how to code?')
