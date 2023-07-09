@@ -15,12 +15,10 @@ def generate_response(input_text):
   loader=CSVLoader(file_path='pokemon.csv')
   index_creator = VectorstoreIndexCreator()
   docsearch = index_creator.from_loaders([loader])
+  chain=RetrievalQA.from_chain_type(llm=OpenAI(),chain_type="stuff",retriever=docsearch.vectorstore.as_retriever(),input_key="question")
   response=chain({"question":input_text})
   st.info(response['result'])
   print(response['result'])
-
- 
-chain=RetrievalQA.from_chain_type(llm=OpenAI(),chain_type="stuff",retriever=docsearch.vectorstore.as_retriever(),input_key="question")
 
 with st.form('my_form'):
   text = st.text_area('Enter text:', 'What are the three key pieces of advice for learning how to code?')
