@@ -8,7 +8,7 @@ import os
 st.title('Bishwajit Search App')
 
 ##openai_api_key = st.sidebar.text_input('OpenAI API Key')
-os.environ['OPENAI_API_KEY']= "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"
+os.environ['OPENAI_API_KEY']= "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"
 
 def generate_response(input_text):
   #llm = OpenAI(temperature=0.7, openai_api_key=openai_api_key)
