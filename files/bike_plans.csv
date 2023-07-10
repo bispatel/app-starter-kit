@@ -1,0 +1,30 @@
+_id,basePrice,createdBy,createdDate,description,kmIncluded,planType,pricePerHour,pricePerKm,rentalType,type
+1,2000,admin,2022-09-20T11:43:15.605Z,,600,City+,1,40,Monthly,Plan
+2,2500,admin,2022-09-20T11:53:37.149Z,,600,Speed,2,40,Monthly,Plan
+3,3000,admin,2022-09-20T11:54:12.404Z,,600,Speed+,3,40,Monthly,Plan
+4,3500,admin,2022-09-20T11:54:12.404Z,,800,Luxé,4,40,Monthly,Plan
+5,4500,admin,2022-09-20T11:54:12.404Z,,1000,Luxé+,5,40,Monthly,Plan
+6,1000,admin,2022-09-20T11:54:12.404Z,,450,Speed,6,40,Weekly,Plan
+7,1250,admin,2022-09-20T11:54:12.404Z,,450,Speed+,7,40,Weekly,Plan
+8,1799,admin,2022-09-20T11:54:12.404Z,,450,Luxé,8,40,Weekly,Plan
+9,1999,admin,2022-09-20T11:54:12.404Z,,450,Luxé+,9,40,Weekly,Plan
+10,200,admin,2022-09-20T11:54:12.404Z,,60,Speed,10,40,Daily,Plan
+11,250,admin,2022-09-20T11:54:12.404Z,,70,Speed+,11,40,Daily,Plan
+12,300,admin,2022-09-20T11:54:12.404Z,,70,Luxé,12,40,Daily,Plan
+13,499,admin,2022-09-20T11:54:12.404Z,,75,Luxé+,13,40,Daily,Plan
+14,360,admin,2022-09-20T11:54:12.404Z,Chota Recharge,150,City+,14,40,Monthly,KM top up
+15,360,admin,2022-09-20T11:54:12.404Z,Chota Recharge,150,Speed,15,40,Monthly,KM top up
+16,360,admin,2022-09-20T11:54:12.404Z,Chota Recharge,150,Speed+,16,40,Monthly,KM top up
+17,670,admin,2022-09-20T11:54:12.404Z,Bada Recharge,300,City+,17,40,Monthly,KM top up
+18,670,admin,2022-09-20T11:54:12.404Z,Bada Recharge,300,Speed,18,40,Monthly,KM top up
+19,670,admin,2022-09-20T11:54:12.404Z,Bada Recharge,300,Speed+,19,40,Monthly,KM top up
+20,1200,admin,2022-09-20T11:54:12.404Z,Maha Recharge,600,City+,20,40,Monthly,KM top up
+21,1200,admin,2022-09-20T11:54:12.404Z,Maha Recharge,600,Speed,21,40,Monthly,KM top up
+22,1200,admin,2022-09-20T11:54:12.404Z,Maha Recharge,600,Speed+,22,40,Monthly,KM top up
+23,1200,admin,2022-09-20T11:54:12.404Z,,600,City+,23,40,Monthly,Battery Top up
+24,1200,admin,2022-09-20T11:54:12.404Z,,600,Speed,24,40,Monthly,Battery Top up
+25,1200,admin,2022-09-20T11:54:12.404Z,,600,Speed+,25,40,Monthly,Battery Top up
+26,600,admin,2022-09-20T11:54:12.404Z,,450,Speed,26,40,Weekly,Battery Top up
+27,600,admin,2022-09-20T11:54:12.404Z,,450,Speed+,27,40,Weekly,Battery Top up
+28,120,admin,2022-09-20T11:54:12.404Z,,60,Speed,28,40,Daily,Battery Top up
+29,120,admin,2022-09-20T11:54:12.404Z,,70,Speed+,29,40,Daily,Battery Top up
