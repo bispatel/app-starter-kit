@@ -37,22 +37,22 @@ def generate_response(input_text):
   ##llm = OpenAI(temperature=0.7, openai_api_key=openai_api_key)
   ##st.info(llm(input_text))
   os.environ["OPENAI_API_KEY"] = openai_api_key
-  loader = CSVLoader(file_path='files/pokemon.csv')
+  #loader = CSVLoader(file_path='files/pokemon.csv')
   folder_path = 'files'
   ##loader = CSVLoader(folder_path=folder_path)
   st.info("Listing of files")
   dataframes = load_files(folder_path)
   st.info(dataframes)
   # Create data loaders for each CSV file
-  data_loaders = [CSVLoader(file_path=filename) for filename in dataframes]
+  data_loaders = [CSVLoader(file_path='files/'+filename) for filename in dataframes]
   st.info(data_loaders)
-  dataframes1 = []
-  st.info(loader)
-  dataframes1.append(loader)
+  #dataframes1 = []
+  #st.info(loader)
+  #dataframes1.append(loader)
   #llm = OpenAI(temperature=0.7, openai_api_key=openai_api_key)
   #st.info(llm(input_text))
   index_creator = VectorstoreIndexCreator()
-  docsearch = index_creator.from_loaders(dataframes1)
+  docsearch = index_creator.from_loaders(data_loaders)
   chain = RetrievalQA.from_chain_type(llm=OpenAI(),chain_type="stuff",retriever=docsearch.vectorstore.as_retriever(),input_key="question")
   response=chain({"question":input_text})
   st.info(response['result'])
