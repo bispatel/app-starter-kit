@@ -46,11 +46,6 @@ def generate_response(input_text):
   # Create data loaders for each CSV file
   data_loaders = [CSVLoader(file_path='files/'+filename) for filename in dataframes]
   st.info(data_loaders)
-  #dataframes1 = []
-  #st.info(loader)
-  #dataframes1.append(loader)
-  #llm = OpenAI(temperature=0.7, openai_api_key=openai_api_key)
-  #st.info(llm(input_text))
   index_creator = VectorstoreIndexCreator()
   docsearch = index_creator.from_loaders(data_loaders)
   chain = RetrievalQA.from_chain_type(llm=OpenAI(),chain_type="stuff",retriever=docsearch.vectorstore.as_retriever(),input_key="question")
